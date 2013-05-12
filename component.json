@@ -1,0 +1,10 @@
+{
+  "name": "stringify-attrs",
+  "repo": "stagas/stringify-attrs",
+  "version": "0.0.1",
+  "description": "attributes serializer",
+  "keywords": ["serializer", "attrs"],
+  "author": "stagas",
+  "license": "MIT",
+  "scripts": ["index.js"]
+}

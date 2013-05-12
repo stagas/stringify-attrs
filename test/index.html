@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>stringify</title>
+    <link rel="stylesheet" href="../build/build.css">
+  </head>
+  <body>
+    <script src="../build/build.js"></script>
+    <script>var stringify = require('stringify-attrs')</script>
+    <script>
+      var tests = 1;
+
+      function pass(){
+        --tests || document.write('all pass');
+      }
+
+      function assert(expr){
+        if (!expr) throw new Error('failed');
+      }
+    </script>
+    <script>
+      var res = stringify({ foo: 'bar', baz: 'zo"o', flag: '' });
+      assert('foo="bar" baz="zo&quot;o" flag'===res);
+      pass();
+    </script>
+  </body>
+</html>
